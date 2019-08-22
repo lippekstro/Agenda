@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Agenda</string>
+    <string name="nome">Nome</string>
+    <string name="telefone">Telefone</string>
+    <string name="email" translatable="false">E-Mail</string>
+    <string name="salvar">Salvar</string>
+    <string name="remover">Remover</string>
+    <string name="novo_aluno">Novo Aluno</string>
+    <string name="edita_aluno">Edita Aluno</string>
+    <string name="removendo_aluno_titulo">Removendo Aluno</string>
+    <string name="mensagem_alerta_remover">Tem certeza que quer remover o aluno?</string>
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="lista_de_alunos">Lista de Alunos</string>
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="nome">Name</string>
+    <string name="remover">Remove</string>
+    <string name="salvar">Save</string>
+    <string name="telefone">Phone Number</string>
+    <string name="edita_aluno">Edit</string>
+    <string name="mensagem_alerta_remover">Are you sure you want to remove the student?</string>
+    <string name="nao">Not</string>
+    <string name="sim">Yes</string>
+    <string name="removendo_aluno_titulo">Removing Student</string>
+    <string name="novo_aluno">New Student</string>
+    <string name="lista_de_alunos">Students List</string>
+</resources>
