@@ -12,4 +12,7 @@
     <string name="sim">Sim</string>
     <string name="nao">Não</string>
     <string name="lista_de_alunos">Lista de Alunos</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="telefone_fixo">Telefone Fixo</string>
+    <string name="telefone_celular">Telefone Celular</string>
 </resources>

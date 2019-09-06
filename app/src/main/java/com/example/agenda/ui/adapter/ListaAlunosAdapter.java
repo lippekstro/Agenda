@@ -8,6 +8,9 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.agenda.R;
+import com.example.agenda.asynctask.BuscaPrimeiroTelefoneDoAlunoTask;
+import com.example.agenda.database.AgendaDatabase;
+import com.example.agenda.database.dao.TelefoneDAO;
 import com.example.agenda.model.Aluno;
 
 import java.util.ArrayList;
@@ -17,9 +20,11 @@ public class ListaAlunosAdapter extends BaseAdapter {
 
     private final List<Aluno> alunos = new ArrayList<>();
     private final Context context;
+    private final TelefoneDAO telefoneDAO;
 
     public ListaAlunosAdapter(Context context) {
         this.context = context;
+        telefoneDAO = AgendaDatabase.getInstance(context).getTelefoneDAO();
     }
 
     @Override
@@ -49,9 +54,9 @@ public class ListaAlunosAdapter extends BaseAdapter {
 
     private void vincula(View view, Aluno aluno) {
         TextView nome = view.findViewById(R.id.item_aluno_nome);
-        nome.setText(aluno.getNome());
-        TextView telefone = view.findViewById(R.id.item_aluno_telefone);
-        telefone.setText(aluno.getTelefone());
+        nome.setText(aluno.getNomeCompleto());
+        final TextView telefone = view.findViewById(R.id.item_aluno_telefone);
+        new BuscaPrimeiroTelefoneDoAlunoTask(telefoneDAO, telefone, aluno.getId(), telefoneEncontrado -> telefone.setText(telefoneEncontrado.getNumero())).execute();
     }
 
     private View criaView(ViewGroup viewGroup) {
